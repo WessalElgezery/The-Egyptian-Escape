@@ -645,6 +645,8 @@ footer a:hover {
     padding: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 #gallery-body .container {
@@ -902,6 +904,8 @@ input::placeholder {
     min-height: 150vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 #about-body main {
