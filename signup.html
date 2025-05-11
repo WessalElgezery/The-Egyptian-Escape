@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Egypt Tourism</title>
+  <link rel="stylesheet" href="logstyle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="signup-container">
+    <h2>Create Your Account</h2>
+    <form id="signupForm">
+      <input type="text" id="signup-name" placeholder="Full Name" required />
+      <input type="email" id="signup-email" placeholder="Email" required />
+      
+      <div class="input-group password-container">
+        <input type="password" id="signup-password" placeholder="Password" required />
+        <span id="togglePasswordSignup" class="eye-icon">👁️</span> <!-- Eye Icon -->
+      </div>
+
+      <div class="input-group password-container">
+        <input type="password" id="signup-confirm" placeholder="Confirm Password" required />
+        <span id="togglePasswordConfirm" class="eye-icon">👁️</span> <!-- Eye Icon -->
+      </div>
+
+      <!-- Country with flag icons -->
+      <select id="signup-country" required>
+        <option value="">🌍 Select Country</option>
+        <option value="Egypt">🇪🇬 Egypt</option>
+        <option value="United States">🇺🇸 United States</option>
+        <option value="United Kingdom">🇬🇧 United Kingdom</option>
+        <option value="France">🇫🇷 France</option>
+        <option value="Germany">🇩🇪 Germany</option>
+        <option value="India">🇮🇳 India</option>
+        <option value="Japan">🇯🇵 Japan</option>
+        <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
+        <option value="Australia">🇦🇺 Australia</option>
+        <option value="Canada">🇨🇦 Canada</option>
+        <option value="Brazil">🇧🇷 Brazil</option>
+        <option value="Italy">🇮🇹 Italy</option>
+        <option value="Russia">🇷🇺 Russia</option>
+        <option value="China">🇨🇳 China</option>
+        <option value="South Africa">🇿🇦 South Africa</option>
+        <option value="Mexico">🇲🇽 Mexico</option>
+        <option value="Argentina">🇦🇷 Argentina</option>
+        <option value="Spain">🇪🇸 Spain</option>
+        <option value="Turkey">🇹🇷 Turkey</option>
+        <option value="Sweden">🇸🇪 Sweden</option>
+        <option value="Netherlands">🇳🇱 Netherlands</option>
+        <option value="South Korea">🇰🇷 South Korea</option>
+        <option value="Singapore">🇸🇬 Singapore</option>
+        <option value="Norway">🇳🇴 Norway</option>
+        <option value="Poland">🇵🇱 Poland</option>
+      </select>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <script>
+    const signupForm = document.getElementById('signupForm');
+    const signupEmail = document.getElementById('signup-email');
+    const signupPassword = document.getElementById('signup-password');
+    const signupConfirm = document.getElementById('signup-confirm');
+
+    // Toggle password visibility
+    document.getElementById('togglePasswordSignup').addEventListener('click', function() {
+      const type = signupPassword.type === 'password' ? 'text' : 'password';
+      signupPassword.type = type;
+      this.textContent = type === 'password' ? '👁️' : '🙈';
+    });
+
+    document.getElementById('togglePasswordConfirm').addEventListener('click', function() {
+      const type = signupConfirm.type === 'password' ? 'text' : 'password';
+      signupConfirm.type = type;
+      this.textContent = type === 'password' ? '👁️' : '🙈';
+    });
+
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = signupEmail.value.trim();
+      const password = signupPassword.value.trim();
+      const confirmPassword = signupConfirm.value.trim();
+
+      // Simple validation for matching passwords
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+
+      // Store user data in localStorage
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPassword', password);
+
+      alert('Sign Up Successful! You can now log in.');
+      window.location.href = 'login.html'; // Redirect to login after sign-up
+    });
+  </script>
+</body>
+</html>

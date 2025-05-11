@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Egypt | Must-See Attractions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="search-body">
+      <!-- Header Section -->
+    <header>
+        <h1>Egypt's Must-See Attractions </h1>
+        <p>Discover ancient wonders and modern marvels</p>
+    </header> 
+
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="search.html" class="active">Search Places</a>
+        <a href="book.html">Book Now</a>
+        <a href="about us.html">About Us</a>
+        <a href="signup.html">Log Out</a>
+    </nav>
+
+      <section class="search-area">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search pyramids, temples, museums...">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="attractions" id="attractions-container">
+            <!-- Content will be loaded by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal for attraction details -->
+    <div class="modal" id="attraction-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <img src="" alt="" class="modal-img" id="modal-img">
+            <h2 id="modal-title"></h2>
+            <p id="modal-location"></p>
+            <p id="modal-description"></p>
+            
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">Best Time to Visit:</span>
+                    <span id="best-time"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Ticket Price:</span>
+                    <span id="ticket-price"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Opening Hours:</span>
+                    <span id="opening-hours"></span>
+                </div>
+            </div>
+            
+            <a href="#" class="book-btn" id="book-btn" target="_blank">Book Now</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Explore The Egyption Tour </h3>
+        <p>We provide unforgettable travel experiences with premium service and unbeatable prices.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="search.html">Search Places</a></li>
+          <li><a href="book.html">Book Now</a></li>
+          <li><a href="about us.html">About Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: help@exploretheworld.com</p>
+        <p>Phone: +20 101 828 6842</p>
+        <p>Address: 123 Travel Lane, Tourism City</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Explore The Egyption Tour . All rights reserved.</p>
+    </div>
+  </footer>
+    <!-- Link to separate JavaScript file -->
+    <script src="js/scripts.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

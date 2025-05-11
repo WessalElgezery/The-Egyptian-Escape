@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Booking Form</title>
+  <!-- Link to separate CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="form-body">
+    <h1>Tourist Booking Form</h1>
+    
+    <form id="booking" novalidate>
+        <div class="form-group">
+            <label for="tour-date">Choose a Date</label>
+            <input type="date" id="tour-date" name="tour-date" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="place-name">Place Name</label>
+            <select id="place-name" name="place-name" required>
+                <option value="">Please select</option>
+                <option value="pyramids">Egyptian Pyramids</option>
+                <option value="museum">The Egyptian Museum</option>
+                <option value="grand-museum">Grand Egyptian Museum</option>
+                <option value="citadel">Cairo Citadel</option>
+                <option value="abu-simbel">Abu Simbel Temples</option>
+                <option value="royal-museum">Royal Jewelry Museum</option>
+                <option value="baron">Baron Empain Palace</option>
+                <option value="abdeen">Abdeen Palace Museum</option>
+                <option value="saint-catherine">Saint Catherine’s Monastery</option>
+                <option value="ras-mohamed">Ras Mohamed National Park</option>
+                <option value="maniel-palace">Manial Palace Museum</option>
+                <option value="karnak">Karnak Temple Complex</option>
+                <option value="umm-kulthum">Umm Kulthum Museum</option>
+                <option value="islamic">Museum of Islamic Art</option>
+                <option value="mummification">Mummification Museum</option>
+                <option value="bibliotheca">Bibliotheca Alexandrina</option>
+                <option value="sharm-museum">Sharm al-Sheikh Museum</option>
+                <option value="ancientheater">Alexandria Ancient Roman Theater</option>
+                <option value="wadi-alhitan">Wadi Al-Hitan</option>
+                <option value="africa-safari">Africa Safari Park</option>
+                <option value="medinet-habu">The Temple of Medinet Habu</option>
+                <option value="alexandria-museum">Alexandria National Museum</option>
+                <option value="coptic">The Coptic Museum</option>
+                <option value="zuwayla">Bab Zuwayla</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tour-time">Tour Time</label>
+            <select id="tour-time" name="tour-time" required>
+                <option value="">Please select</option>
+                <option value="6am">6:00 AM - 7:00 AM</option>
+                <option value="7am">7:00 AM - 8:00 AM</option>
+                <option value="8am">8:00 AM - 9:00 AM</option>
+                <option value="9am">9:00 AM - 10:00 AM</option>
+                <option value="10am">10:00 AM - 11:00 AM</option>
+                <option value="11am">11:00 AM - 12:00 PM</option>
+                <option value="12pm">12:00 PM - 1:00 PM</option>
+                <option value="2pm">2:00 PM - 3:00 PM</option>
+                <option value="3pm">3:00 PM - 4:00 PM</option>
+                <option value="4pm">4:00 PM - 5:00 PM</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Full Name</label>
+            <div class="name-group">
+                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+20 123 456 7890" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="nationality">Nationality</label>
+            <input type="text" id="nationality" name="nationality" placeholder="Your country" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="participants">Number of Participants</label>
+            <input type="number" id="participants" name="participants" min="1" max="20" placeholder="1-20" required>
+        </div>
+        
+        <button type="submit">Book Now</button>
+    </form>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/book.js"></script>
+
+</body>
+</html>
